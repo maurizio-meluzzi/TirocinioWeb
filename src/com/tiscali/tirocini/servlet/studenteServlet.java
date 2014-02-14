@@ -1,8 +1,6 @@
 package com.tiscali.tirocini.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.StringTokenizer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,24 +34,19 @@ public class studenteServlet extends HttpServlet {
 		if (action.equals("create"))
 		{
 			createStudente(request, response);
-			
 		}
 		else if (action.equals("read"))
 		{
 			readStudente(request, response);
-			
 		}
 		else if (action.equals("update"))
 		{
 			updateStudente(request, response);
-			
 		}
 		else if (action.equals("delete"))
 		{
 			deleteStudente(request, response);
 		}
-
-
 	}
 
 
@@ -71,11 +64,11 @@ public class studenteServlet extends HttpServlet {
 		}
 		catch (DuplicatedEntityException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			// TODO sbagliato. deve fare il forward verso la pagina di errore
 		}
-		
 	}
+
 
 	private void readStudente(HttpServletRequest request, HttpServletResponse response)
 	{
