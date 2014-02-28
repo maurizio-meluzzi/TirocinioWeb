@@ -17,19 +17,20 @@
 		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
 			<tbody>
 <%
-	Universita uni = new Universita("Cagliari");
-	for (Studente studente : uni.getStudenti().values())
+	// Universita uni = new Universita("Cagliari"); // SBAGLIATO!! PRENDERE DALLA SESSIONE!!
+	for (Studente studente : Universita.getInstance().getStudentiCollection())
 	{
 %>
 				<tr>
-					<td><%= studente.getNome() %> <%= studente.getCognome() %></td>
-					<td><a href="<%= request.getParameter("type") %>Servlet?action=update&id=<%= studente.getCf() %>">Modifica</a></td>
-					<td><a href="<%= request.getParameter("type") %>Servlet?action=delete&id=<%= studente.getCf() %>">Cancella</a></td>
+					<td><a href="StudenteDetail.jsp?cf=<%= studente.getCf() %>"><%= studente.getNome() %> <%= studente.getCognome() %></a></td>
+					<td><a href="UpdateStudente.jsp?cf=<%= studente.getCf() %>">Modifica</a></td>
+					<td><a href="StudenteServlet?action=delete&cf=<%= studente.getCf() %>">Cancella</a></td>
 				</tr>
 <%
 	}
 %>
 			</tbody>
 		</table>
+		<br><br><a href="../TirocinioWebApp/">Home</a>
 	</body>
 </html>

@@ -23,8 +23,8 @@
 %>
 				<tr>
 					<td><%= responsabile.getNome() %> <%= responsabile.getCognome() %></td>
-					<td><a href="<%= request.getParameter("type") %>Servlet?action=update&id=<%= responsabile.getCf() %>">Modifica</a></td>
-					<td><a href="<%= request.getParameter("type") %>Servlet?action=delete&id=<%= responsabile.getCf() %>">Cancella</a></td>
+					<td><a href="ResponsabileServlet?action=update&id=<%= responsabile.getCf() %>">Modifica</a></td>
+					<td><a href="ResponsabileServlet?action=delete&id=<%= responsabile.getCf() %>">Cancella</a></td>
 				</tr>
 <%
 	}

@@ -23,8 +23,8 @@
 %>
 				<tr>
 					<td><%= azienda.getRagioneSociale() %></td>
-					<td><a href="<%= request.getParameter("type") %>Servlet?action=update&id=<%= azienda.getPartitaIva() %>">Modifica</a></td>
-					<td><a href="<%= request.getParameter("type") %>Servlet?action=delete&id=<%= azienda.getPartitaIva() %>">Cancella</a></td>
+					<td><a href="AziendaServlet?action=update&id=<%= azienda.getPartitaIva() %>">Modifica</a></td>
+					<td><a href="AziendaServlet?action=delete&id=<%= azienda.getPartitaIva() %>">Cancella</a></td>
 				</tr>
 <%
 	}
