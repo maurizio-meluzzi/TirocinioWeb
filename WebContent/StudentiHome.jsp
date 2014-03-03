@@ -17,7 +17,6 @@
 		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
 			<tbody>
 <%
-	// Universita uni = new Universita("Cagliari"); // SBAGLIATO!! PRENDERE DALLA SESSIONE!!
 	for (Studente studente : Universita.getInstance().getStudentiCollection())
 	{
 %>

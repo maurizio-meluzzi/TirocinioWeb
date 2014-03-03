@@ -17,8 +17,7 @@
 		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
 			<tbody>
 <%
-	Universita uni = new Universita("Cagliari");
-	for (Responsabile responsabile : uni.getResponsabili().values())
+	for (Responsabile responsabile : Universita.getInstance().getResponsabiliCollection())
 	{
 %>
 				<tr>
